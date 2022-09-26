@@ -4,9 +4,12 @@ import Home from './views/Home';
 
 function App() {
   return (
-    <Routes>
-      <Route path='/' element={<Home/>} />
-    </Routes>
+    <div>
+
+      <Routes>
+        <Route path='/' element={<Home/>} />
+      </Routes>
+    </div>
   );
 }
 
