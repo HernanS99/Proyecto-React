@@ -2,55 +2,55 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer class="text-center text-white">
-      <div class="container pt-4">
-        <div class="mb-4">
+    <footer className="row text-center text-white">
+      <div className="container pt-4 bg-secondary">
+        <div className="mb-4">
           <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            className="btn btn-link btn-floating btn-lg text-dark m-1"
             href="#!"
             role="button"
-          ><i class="fab fa-facebook-f"></i
+          ><i className="fab fa-facebook-f"></i
           ></a>
 
           <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            className="btn btn-link btn-floating btn-lg text-dark m-1"
             href="#!"
             role="button"
-          ><i class="fab fa-twitter"></i
+          ><i className="fab fa-twitter"></i
           ></a>
 
           <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            className="btn btn-link btn-floating btn-lg text-dark m-1"
             href="#!"
             role="button"
-          ><i class="fab fa-google"></i
+          ><i className="fab fa-google"></i
           ></a>
 
           <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            className="btn btn-link btn-floating btn-lg text-dark m-1"
             href="#!"
             role="button"
-          ><i class="fab fa-instagram"></i
+          ><i className="fab fa-instagram"></i
           ></a>
 
           <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            className="btn btn-link btn-floating btn-lg text-dark m-1"
             href="#!"
             role="button"
-          ><i class="fab fa-linkedin"></i
+          ><i className="fab fa-linkedin"></i
           ></a>
           <a
-            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            className="btn btn-link btn-floating btn-lg text-dark m-1"
             href="#!"
             role="button"
-          ><i class="fab fa-github"></i
+          ><i className="fab fa-github"></i
           ></a>
         </div>
 
       </div>
-      <div class="text-center text-dark p-3">
+      <div className="text-center text-dark p-3 bg-secondary bg-opacity-25">
         © 2020 Copyright:
-        <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        <a className="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
       </div>
     </footer>
   )
