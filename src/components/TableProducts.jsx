@@ -15,7 +15,7 @@ function TableProducts() {
     useEffect(()=>{
         getProducts()
     },[])
-    console.log(productos)
+    console.log(productos )
     return (
         <div>
             <table className="table">
@@ -25,6 +25,8 @@ function TableProducts() {
                         <th scope="col">Nombre</th>
                         <th scope="col">Precio</th>
                         <th scope="col">Descripcion</th>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Eliminar</th>
                     </tr>
                 </thead>
                 <tbody>
