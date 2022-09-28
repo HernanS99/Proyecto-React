@@ -1,4 +1,18 @@
+import { useState } from "react"
+
 const Contact = () => {
+
+    const [user, setUser] = useState({})
+
+    const handleInput = (evento) => {
+        const { value, name } = evento.target
+        setUser({
+            ...user,
+            [name]: value
+        })
+
+    }
+
     return (
             <div className="container-fluid mb-4">
                 <div className="row">
@@ -11,20 +25,20 @@ const Contact = () => {
                                     <div className="form-group">
                                         <label className="control-label" for="name">Nombre</label>
                                         <div className="">
-                                            <input id="name" name="name" type="text" placeholder="Tu nombre" className="form-control" />
+                                            <input id="name" name="name" type="text" placeholder="Tu nombre" className="form-control" onChange={(evento) => handleInput(evento)}/>
                                         </div>
                                     </div>
                                     <div className="form-group">
                                         <label className="control-label" for="email">Tu Correo</label>
                                         <div className="">
-                                            <input id="email" name="email" type="text" placeholder="Tu correo" className="form-control" />
+                                            <input id="email" name="email" type="text" placeholder="Tu correo" className="form-control" onChange={(evento) => handleInput(evento)}/>
                                         </div>
                                     </div>
 
                                     <div className="form-group mb-4">
                                         <label className="control-label" for="message">Tu Mensaje</label>
                                         <div className="">
-                                            <textarea className="form-control" id="message" name="message" placeholder="Por favor ingresa tu mensaje aqui..." rows="5"></textarea>
+                                            <textarea className="form-control" id="message" name="message" placeholder="Por favor ingresa tu mensaje aqui..." rows="5" onChange={(evento) => handleInput(evento)}></textarea>
                                         </div>
                                     </div>
 

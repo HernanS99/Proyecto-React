@@ -50,7 +50,7 @@ function Footer() {
       </div>
       <div className="text-center text-dark p-3 bg-secondary bg-opacity-25">
         © 2020 Copyright:
-        <a className="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        <a className="text-dark" href="#!">Hernan Silva</a>
       </div>
     </footer>
   )

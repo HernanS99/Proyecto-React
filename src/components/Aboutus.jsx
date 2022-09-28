@@ -1,6 +1,9 @@
 import Img from '../assets/img/team.jpg'
 
 const Aboutus = () => {
+
+    
+
     return (
         <section id="about" className="about">
             <div className="container mb-5">
