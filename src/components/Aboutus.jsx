@@ -1,4 +1,4 @@
-import Img from '../assets/img/about.jpg'
+import Img from '../assets/img/team.jpg'
 
 const Aboutus = () => {
     return (
@@ -9,13 +9,13 @@ const Aboutus = () => {
                         <img src={Img} class="img-fluid" alt=""/>
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0">
-                        <h3>About Us</h3>
+                        <h3>Nosotros</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Tenemos todo dispuesto para entregar una experiencia única.
                         </p>
                         <ul>
-                            <p><i class="fa-solid fa-check-double"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            <p><i class="fa-solid fa-check-double"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                            <p><i class="fa-solid fa-check-double"></i> Directamente desde China nuestros chefs te cautivan con gastronomía tradicional de la región, amoldada a los gustos particulares del paladar santiaguino, prevaleciendo el interés principal de satisfacer el gusto, olfato y vista de nuestros clientes.</p>
+                            <p><i class="fa-solid fa-check-double"></i> Contamos con una variada carta de comida china.</p>
                         </ul>
                         <div class="row icon-boxes">
                             <div class="col-md-6">
