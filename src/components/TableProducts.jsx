@@ -1,8 +1,9 @@
 function TableProducts(props) {
-
+    let datos = props.datos.data()
+    const {nombre, precio, descripcion} = datos
     return (
         <div>
-            <table class="table">
+            <table className="table">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -14,9 +15,9 @@ function TableProducts(props) {
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
-                        <td>{props.datos.name}</td>
-                        <td>{props.datos.precio}</td>
-                        <td>{props.datos.descripcion}</td>
+                        <td>{nombre}</td>
+                        <td>{precio}</td>
+                        <td>{descripcion}</td>
                     </tr>
                 </tbody>
             </table>

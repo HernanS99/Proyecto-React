@@ -12,7 +12,7 @@ const Hero = () => {
                     <h4 className='mt-5'>La mejor comida china a la puerta de tu casa</h4>
                 </div>
                 <div className="col-7 p-5">
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
                         <Carousel variant="dark">
                             <Carousel.Item>
                                 <img
