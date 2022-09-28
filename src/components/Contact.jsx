@@ -1,46 +1,44 @@
 const Contact = () => {
     return (
-        <div>
-<div class="container">
-	<div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <div class="well well-sm">
-          <form class="form-horizontal" action="" method="post">
-          <fieldset>
-            <legend class="text-center">Contact us</legend>
-    
-            <div class="form-group">
-              <label class="col-md-3 control-label" for="name">Name</label>
-              <div class="col-md-9">
-                <input id="name" name="name" type="text" placeholder="Your name" class="form-control"/>
-              </div>
+            <div className="container-fluid mb-4">
+                <div className="row">
+                    <div className="col-12 text-center">
+                        <div className="well well-sm">
+                            <form className="form-horizontal" action="" method="post">
+                                <fieldset>
+                                    <legend className="text-center">Contact us</legend>
+
+                                    <div className="form-group">
+                                        <label className="control-label" for="name">Name</label>
+                                        <div className="">
+                                            <input id="name" name="name" type="text" placeholder="Your name" className="form-control" />
+                                        </div>
+                                    </div>
+                                    <div className="form-group">
+                                        <label className="control-label" for="email">Your E-mail</label>
+                                        <div className="">
+                                            <input id="email" name="email" type="text" placeholder="Your email" className="form-control" />
+                                        </div>
+                                    </div>
+
+                                    <div className="form-group mb-4">
+                                        <label className="control-label" for="message">Your message</label>
+                                        <div className="">
+                                            <textarea className="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div className="form-group">
+                                        <div className="col-md-12 text-right">
+                                            <button type="submit" className="btn btn-primary btn-lg">Submit</button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-              <label class="col-md-3 control-label" for="email">Your E-mail</label>
-              <div class="col-md-9">
-                <input id="email" name="email" type="text" placeholder="Your email" class="form-control"/>
-              </div>
-            </div>
-    
-            <div class="form-group">
-              <label class="col-md-3 control-label" for="message">Your message</label>
-              <div class="col-md-9">
-                <textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
-              </div>
-            </div>
-    
-            <div class="form-group">
-              <div class="col-md-12 text-right">
-                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-              </div>
-            </div>
-          </fieldset>
-          </form>
-        </div>
-      </div>
-	</div>
-</div>
-        </div>
     )
 }
 export default Contact
