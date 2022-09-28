@@ -1,6 +1,21 @@
-function TableProducts(props) {
-    let datos = props.datos.data()
-    const {nombre, precio, descripcion} = datos
+import ProductsRow from "./ProductsRow"
+import { db } from '../config/firebase'
+import { collection , getDocs} from 'firebase/firestore'
+import { useEffect, useState } from "react"
+
+function TableProducts() {
+    
+    const [productos, setProductos] = useState([])
+
+    const getProducts = async () => {
+        let response = await getDocs(collection(db,'products'))
+        setProductos(response.docs)
+    }
+    
+    useEffect(()=>{
+        getProducts()
+    },[])
+    console.log(productos)
     return (
         <div>
             <table className="table">
@@ -13,12 +28,7 @@ function TableProducts(props) {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>{nombre}</td>
-                        <td>{precio}</td>
-                        <td>{descripcion}</td>
-                    </tr>
+                    {productos.map(product => <ProductsRow datos={product} key={product.id}/>)}
                 </tbody>
             </table>
         </div>
