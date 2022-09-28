@@ -12,7 +12,7 @@ const Contact = () => {
         })
 
     }
-
+    console.log(user)
     return (
             <div className="container-fluid mb-4">
                 <div className="row">
