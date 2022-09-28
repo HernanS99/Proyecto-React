@@ -15,7 +15,7 @@ function TableProducts() {
    
     useEffect(()=>{
         getProducts()
-    },)
+    },[])
     return (
         <div>
             <table className="table">
