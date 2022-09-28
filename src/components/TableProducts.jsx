@@ -1,21 +1,22 @@
-const TableProducts = () => {
+function TableProducts(props) {
+
     return (
         <div>
             <table class="table">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Descripcion</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td>{props.datos.name}</td>
+                        <td>{props.datos.precio}</td>
+                        <td>{props.datos.descripcion}</td>
                     </tr>
                 </tbody>
             </table>
