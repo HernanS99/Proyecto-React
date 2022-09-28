@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { db } from '../config/firebase'
+import { collection , addDoc} from 'firebase/firestore'
 
 const Contact = () => {
 
@@ -10,7 +12,9 @@ const Contact = () => {
             ...user,
             [name]: value
         })
-
+    }
+    const saveRecomendation = async () => {
+        await addDoc(collection(db,'recomendaciones'),user)
     }
     console.log(user)
     return (
@@ -44,7 +48,7 @@ const Contact = () => {
 
                                     <div className="form-group">
                                         <div className="col-md-12 text-right">
-                                            <button type="submit" className="btn btn-primary btn-lg">Enviar</button>
+                                            <button type="submit" className="btn btn-primary btn-lg" onClick={saveRecomendation}>Enviar</button>
                                         </div>
                                     </div>
                                 </fieldset>
