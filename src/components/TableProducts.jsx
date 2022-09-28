@@ -6,16 +6,16 @@ import { useEffect, useState } from "react"
 function TableProducts() {
     
     const [productos, setProductos] = useState([])
-
+    
     const getProducts = async () => {
         let response = await getDocs(collection(db,'products'))
         setProductos(response.docs)
     }
-    
+
+   
     useEffect(()=>{
         getProducts()
-    },[])
-    console.log(productos )
+    },)
     return (
         <div>
             <table className="table">
