@@ -20,6 +20,10 @@ const ProductsRow = (props) => {
             [e.target.name]:e.target.value
         })
     }
+
+    const update = () => {
+        
+    }
     console.log(epro)
     return (
         <tr>
@@ -27,7 +31,7 @@ const ProductsRow = (props) => {
             <td>{edit===false ? nombre :<input id="name" name='name' value={epro.nombre} onChange={(e)=>handleInput(e)}/>}</td>
             <td>{edit===false ? precio :<input id="precio" name='precio' value={epro.precio} onChange={(e)=>handleInput(e)} />} </td>
             <td>{edit===false ? descripcion :<input id="descripcion" name='descripcion' value={epro.descripcion} onChange={(e)=>handleInput(e)}/> }</td>
-            <td><button type="button" className="btn btn-primary" onClick={editt}>{edit===false ? 'Editar' : 'Actualizar'}</button></td>
+            <td><button type="button" className="btn btn-primary" onClick={edit===true ? editt : update}>{edit===false ? 'Editar' : 'Actualizar'}</button></td>
             <td>{edit===false ? <button type="button" className="btn btn-primary" onClick={eliminar}>Eliminar</button>: null}</td>
         </tr>
     )
