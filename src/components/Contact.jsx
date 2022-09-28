@@ -22,9 +22,9 @@ const Contact = () => {
                 <div className="row">
                     <div className="col-12 text-center">
                         <div className="well well-sm">
-                            <form className="form-horizontal" action="" method="post">
+                            <form className="form-horizontal" action="" method="">
                                 <fieldset>
-                                    <legend className="text-center">Contact us</legend>
+                                    <legend className="text-center">Contactanos</legend>
 
                                     <div className="form-group">
                                         <label className="control-label" for="name">Nombre</label>
@@ -48,7 +48,7 @@ const Contact = () => {
 
                                     <div className="form-group">
                                         <div className="col-md-12 text-right">
-                                            <button type="submit" className="btn btn-primary btn-lg" onClick={saveRecomendation}>Enviar</button>
+                                            <button type="button" className="btn btn-primary btn-lg" onClick={saveRecomendation}>Enviar</button>
                                         </div>
                                     </div>
                                 </fieldset>
