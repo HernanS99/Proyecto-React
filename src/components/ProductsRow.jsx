@@ -25,7 +25,6 @@ const ProductsRow = (props) => {
         await setDoc(doc(db,'products',props.datos.id),epro)
         setEdit(false)
     }
-    console.log(epro)
     return (
         <tr>
             <th scope="row">1</th>
