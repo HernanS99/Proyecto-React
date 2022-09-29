@@ -2,6 +2,7 @@ import React from 'react';
 
 function Footer() {
   return (
+    <div className='container-fluid'>
     <footer className="row text-center text-white">
       <div className="container pt-4 bg-secondary">
         <div className="mb-4">
@@ -53,6 +54,7 @@ function Footer() {
         <a className="text-dark" href="#!">Hernan Silva</a>
       </div>
     </footer>
+    </div>
   )
 }
 
