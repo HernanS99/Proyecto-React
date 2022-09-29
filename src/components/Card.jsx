@@ -10,9 +10,6 @@ function Card(props) {
                         <img
                             src="https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt='foto' classNameName="img-fluid"/>
                     </div>
-
-                     <a className="card-action" href="#!"><i className="fa fa-heart"></i>
-                     </a> 
                     <div className="card-heading">
                         {nombre}
                     </div>
@@ -21,8 +18,7 @@ function Card(props) {
                     </div>
                     <div className="card-text">
                         ${precio}
-                    </div> 
-                            <a href="#!" className="card-button"> Purchase</a> 
+                    </div>
                 </div>
             </div>
     )
