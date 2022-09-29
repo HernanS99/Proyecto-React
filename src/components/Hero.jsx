@@ -7,11 +7,11 @@ const Hero = () => {
     return (
         <div className="container">
             <div className="row ">
-                <div className="col-5 p-5">
+                <div className="col-xl-5 col-md-12 p-5">
                     <h1 className='text-center fs-1 fw-bold'>Bienvenido</h1>
                     <h4 className='mt-5'>La mejor comida china a la puerta de tu casa</h4>
                 </div>
-                <div className="col-7 p-5">
+                <div className="col-xl-7 col-md-12 p-5">
                     <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
                         <Carousel variant="dark">
                             <Carousel.Item>
