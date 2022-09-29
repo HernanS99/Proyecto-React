@@ -9,10 +9,10 @@ const ProductsRow = (props) => {
     const [epro, setEpro] =  useState({nombre,precio,descripcion})
     const eliminar = async () => {
         await deleteDoc(doc(db,'products',props.datos.id))
+        props.update()
     }
     const editt = () => {
         setEdit(true)
-        
     }
     const handleInput = (e) =>{
         setEpro({
@@ -23,6 +23,7 @@ const ProductsRow = (props) => {
 
     const update = async () => {
         await setDoc(doc(db,'products',props.datos.id),epro)
+        props.update()
         setEdit(false)
     }
     return (

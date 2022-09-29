@@ -12,10 +12,12 @@ function TableProducts() {
         setProductos(response.docs)
     }
 
-   
+    
     useEffect(()=>{
         getProducts()
-    })
+    },[])
+    
+    console.log(productos)
     return (
         <div>
             <table className="table">
@@ -30,7 +32,7 @@ function TableProducts() {
                     </tr>
                 </thead>
                 <tbody>
-                    {productos.map(product => <ProductsRow datos={product} key={product.id}/>)}
+                    {productos.map(product => <ProductsRow datos={product} update={getProducts} key={product.id}/>)}
                 </tbody>
             </table>
         </div>

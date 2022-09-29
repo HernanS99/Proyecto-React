@@ -1,5 +1,4 @@
 import Card from "./Card"
-import axios from 'axios';
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -18,10 +17,10 @@ const Catalogue = () => {
 
     useEffect(()=>{
         getProducts()
-    },)
+    },[])
     
-    
-
+   
+    console.log(productos)
     return (
         <div className="container">
             <div className="row">
