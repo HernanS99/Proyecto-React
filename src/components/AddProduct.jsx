@@ -2,7 +2,7 @@ import { useState } from "react"
 import { db } from '../config/firebase'
 import { collection , addDoc} from 'firebase/firestore'
 
-const AddProduct = () => {
+function AddProduct(props){
 
     const [product, saveProduct] = useState({})
 
@@ -17,6 +17,7 @@ const AddProduct = () => {
 
     const saveProductos = async () => {
         await addDoc(collection(db,'products'),product)
+        props.update()
     }
 
     console.log(product)

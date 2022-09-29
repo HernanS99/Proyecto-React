@@ -11,9 +11,11 @@ const ProductsRow = (props) => {
         await deleteDoc(doc(db,'products',props.datos.id))
         props.update()
     }
+    
     const editt = () => {
         setEdit(true)
     }
+
     const handleInput = (e) =>{
         setEpro({
             ...epro,
@@ -26,6 +28,7 @@ const ProductsRow = (props) => {
         props.update()
         setEdit(false)
     }
+
     return (
         <tr>
             <th scope="row">1</th>
