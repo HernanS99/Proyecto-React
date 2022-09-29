@@ -1,6 +1,8 @@
 
 
 function Card(props) {
+    let datos = props.datos.data()
+    const {nombre, precio, descripcion} = datos
     return (
             <div className="col-sm-6 col-md-4 col-xl-3">
                 <div className="card-sl mb-5">
@@ -12,13 +14,13 @@ function Card(props) {
                      <a className="card-action" href="#!"><i className="fa fa-heart"></i>
                      </a> 
                     <div className="card-heading">
-                        {props.datos.name}
+                        {nombre}
                     </div>
                     <div className="card-text">
-                        {props.datos.descripcion}
+                        {descripcion}
                     </div>
                     <div className="card-text">
-                        $67,400
+                        ${precio}
                     </div> 
                             <a href="#!" className="card-button"> Purchase</a> 
                 </div>

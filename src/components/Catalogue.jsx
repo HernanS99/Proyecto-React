@@ -3,18 +3,21 @@ import axios from 'axios';
 import { useState } from "react";
 import { useEffect } from "react";
 
+import { db } from '../config/firebase'
+import { collection , getDocs} from 'firebase/firestore'
+
 const Catalogue = () => {
-    const [poke, setPoke] = useState([])
+    const [productos, setProductos] = useState([])
     
 
 
-    const getFromA = async () => {
-        let resp = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=10&offset=0')
-        setPoke(resp.data.results)
+    const getProducts = async () => {
+        let response = await getDocs(collection(db,'products'))
+        setProductos(response.docs)
     }
 
     useEffect(()=>{
-        getFromA()
+        getProducts()
     },)
     
     
@@ -27,7 +30,7 @@ const Catalogue = () => {
                 </div>
             </div>
             <div className="row ">
-             { poke.map(producto=><Card datos={producto} key={producto.name}/>) } 
+             { productos.map(producto=><Card datos={producto} key={producto.name}/>) } 
             </div>
         </div>
     )
