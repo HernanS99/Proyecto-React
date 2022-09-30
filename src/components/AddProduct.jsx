@@ -39,6 +39,10 @@ function AddProduct(props){
                 <div className="col-md-12 text-center mb-3">
                     <button type="button" className="btn btn-primary btn-lg" onClick={saveProductos}>Enviar</button>
                 </div>
+                <div className="d-grid col-md-12 justify-content-md-end mb-3">
+                    <button type="button" className="btn btn-primary btn-lg" onClick={saveProductos}>Enviar</button>
+                </div>
+
             </div>
         </div>
 
