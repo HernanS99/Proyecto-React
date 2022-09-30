@@ -15,9 +15,14 @@ function AddProduct(props){
         )
     }
 
+    const changeState = () => {
+        saveInsert(true)
+    }
+
     const saveProductos = async () => {
         await addDoc(collection(db,'products'),product)
         props.update()
+        saveInsert(false)
     }
 
     console.log(product)
@@ -26,7 +31,7 @@ function AddProduct(props){
             {
                 insert === false
                 ? <div className="d-grid col-md-12 justify-content-md-end mb-3 mt-3">
-                <button type="button" className="btn btn-primary btn-lg" onClick={saveProductos}>Agregar producto</button>
+                <button type="button" className="btn btn-success btn-lg" onClick={changeState}>Agregar producto</button>
                 </div>
                 :
                 <div className="row">
