@@ -39,7 +39,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-export const db = getFirestore(app)
+const db = getFirestore(app)
 
 const logInWithEmailAndPassword = async (email, password) => {
   try {
@@ -65,4 +65,10 @@ const registerWithEmailAndPassword = async (name, email, password) => {
       console.error(err);
       alert(err.message);
   }
+};
+export {
+  auth,
+  db,
+  logInWithEmailAndPassword,
+  registerWithEmailAndPassword
 };
