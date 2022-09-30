@@ -10,7 +10,7 @@ function NavMax() {
         <div className="collapse navbar-collapse" id="navbarScroll">
           <ul className="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll ">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#!">Inicio</a>
+              <a className="nav-link active" aria-current="page" href="/">Inicio</a>
             </li>
           </ul>
         </div>
