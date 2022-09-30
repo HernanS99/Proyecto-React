@@ -3,7 +3,7 @@ import { db } from '../config/firebase'
 import { collection , addDoc} from 'firebase/firestore'
 
 function AddProduct(props){
-
+    const [insert, saveInsert] = useState(false)
     const [product, saveProduct] = useState({})
 
     const handleInput = (e) => {
@@ -23,7 +23,13 @@ function AddProduct(props){
     console.log(product)
     return (
         <div className="container">
-            <div className="row">
+            {
+                insert === false
+                ? <div className="d-grid col-md-12 justify-content-md-end mb-3 mt-3">
+                <button type="button" className="btn btn-primary btn-lg" onClick={saveProductos}>Agregar producto</button>
+                </div>
+                :
+                <div className="row">
                 <div className="input-group mb-3 mt-5">
                     <p className="me-3">Nombre: </p>
                     <input type="text" className="form-control" name="nombre" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" onChange={(evento) => handleInput(evento)}/>
@@ -39,11 +45,11 @@ function AddProduct(props){
                 <div className="col-md-12 text-center mb-3">
                     <button type="button" className="btn btn-primary btn-lg" onClick={saveProductos}>Enviar</button>
                 </div>
-                <div className="d-grid col-md-12 justify-content-md-end mb-3">
-                    <button type="button" className="btn btn-primary btn-lg" onClick={saveProductos}>Enviar</button>
-                </div>
+                
 
             </div>
+            }
+            
         </div>
 
     )
