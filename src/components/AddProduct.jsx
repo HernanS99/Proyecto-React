@@ -47,6 +47,10 @@ function AddProduct(props){
                     <p className="me-3">Descripcion: </p>
                     <input type="text" className="form-control" name="descripcion" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" onChange={(evento) => handleInput(evento)}/>
                 </div>
+                <div className="input-group mb-3">
+                    <p className="me-3">Url imagen: </p>
+                    <input type="text" className="form-control" name="img" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" onChange={(evento) => handleInput(evento)}/>
+                </div>
                 <div className="col-md-12 text-center mb-3">
                     <button type="button" className="btn btn-primary btn-lg" onClick={saveProductos}>Enviar</button>
                 </div>

@@ -22,7 +22,7 @@ function TableProducts() {
     return (
         <div>
             <div>
-                <p className="text-center fs-1">Menu de productos</p>
+                <p className="text-center fs-1 ">Menu de productos</p>
             </div>
             <div>
                 <AddProduct update={getProducts}/>
