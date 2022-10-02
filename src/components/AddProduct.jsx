@@ -3,8 +3,9 @@ import { db } from '../config/firebase'
 import { collection , addDoc} from 'firebase/firestore'
 
 function AddProduct(props){
+    let nombre,precio,descripcion,img = ""
     const [insert, saveInsert] = useState(false)
-    const [product, saveProduct] = useState({})
+    const [product, saveProduct] = useState({nombre,precio,descripcion,img})
 
     const handleInput = (e) => {
         const  { value , name } = e.target
@@ -20,13 +21,19 @@ function AddProduct(props){
     }
 
     const saveProductos = async () => {
-        try{
-            await addDoc(collection(db,'products'),product)
-            props.update()
-            saveInsert(false)
-        }catch(err){
-
+        if(product.nombre === undefined || product.precio === undefined || product.descripcion === undefined|| product.img === undefined) {
+            alert("Debe rellenar todos los campos")
+            
+        }else{
+            try{
+                await addDoc(collection(db,'products'),product)
+                props.update()
+                saveInsert(false)
+            }catch(err){
+    
+            }
         }
+        
         
     }
 
