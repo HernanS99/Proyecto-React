@@ -35,6 +35,7 @@ function TableProducts() {
                             <th scope="col">Nombre</th>
                             <th scope="col">Precio</th>
                             <th scope="col">Descripcion</th>
+                            <th scope="col">Url imagen</th>
                             <th scope="col">Editar</th>
                             <th scope="col">Eliminar</th>
                         </tr>
