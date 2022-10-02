@@ -14,7 +14,12 @@ const Contact = () => {
         })
     }
     const saveRecomendation = async () => {
-        await addDoc(collection(db,'recomendaciones'),user)
+        try{
+            await addDoc(collection(db,'recomendaciones'),user)
+        }catch(err){
+            
+        }
+        
     }
     console.log(user)
     return (

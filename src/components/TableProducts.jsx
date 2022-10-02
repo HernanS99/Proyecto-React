@@ -9,8 +9,12 @@ function TableProducts() {
     const [productos, setProductos] = useState([])
 
     const getProducts = async () => {
-        let response = await getDocs(collection(db, 'products'))
-        setProductos(response.docs)
+        try{
+            let response = await getDocs(collection(db, 'products'))
+            setProductos(response.docs)
+        }catch(err){
+
+        }
     }
 
 

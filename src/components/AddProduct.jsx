@@ -20,9 +20,14 @@ function AddProduct(props){
     }
 
     const saveProductos = async () => {
-        await addDoc(collection(db,'products'),product)
-        props.update()
-        saveInsert(false)
+        try{
+            await addDoc(collection(db,'products'),product)
+            props.update()
+            saveInsert(false)
+        }catch(err){
+
+        }
+        
     }
 
     console.log(product)
