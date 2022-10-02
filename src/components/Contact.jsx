@@ -14,11 +14,18 @@ const Contact = () => {
         })
     }
     const saveRecomendation = async () => {
-        try{
-            await addDoc(collection(db,'recomendaciones'),user)
-        }catch(err){
-            
-        }
+        const regexmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i 
+        if (regexmail.test(user.email)) {
+            try{
+                await addDoc(collection(db,'recomendaciones'),user)
+            }catch(err){
+    
+            }
+        }else{
+            alert("mail malo")
+        } 
+
+        
         
     }
     console.log(user)
@@ -34,13 +41,13 @@ const Contact = () => {
                                     <div className="form-group">
                                         <label className="control-label" for="name">Nombre</label>
                                         <div className="">
-                                            <input id="name" name="name" type="text" placeholder="Tu nombre" className="form-control" onChange={(evento) => handleInput(evento)}/>
+                                            <input id="name" name="name" type="text" placeholder="Tu nombre" className="form-control" minlength="2" maxlength="30" onChange={(evento) => handleInput(evento)}/>
                                         </div>
                                     </div>
                                     <div className="form-group">
                                         <label className="control-label" for="email">Tu Correo</label>
                                         <div className="">
-                                            <input id="email" name="email" type="text" placeholder="Tu correo" className="form-control" onChange={(evento) => handleInput(evento)}/>
+                                            <input id="email" name="email" type="email" placeholder="Tu correo" className="form-control" onChange={(evento) => handleInput(evento)}/>
                                         </div>
                                     </div>
 
