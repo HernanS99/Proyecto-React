@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { auth, signInWithEmailAndPassword, signInWithGoogle, logInWithEmailAndPassword } from "../config/firebase";
 
+
 const Login = () => {
 
     let usuarios = []
@@ -15,8 +16,8 @@ const Login = () => {
 
     }
     function validateUser(){
-        const regexmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
-        if (regexmail.test(user.email)) {
+        /* const regexmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i */
+        /* if (regexmail.test(user.email)) {
             let existe = usuarios.find((element) => element.email === user.email && element.password === user.password)
             if (existe === undefined) {
                 alert("ads")
@@ -25,7 +26,7 @@ const Login = () => {
             }
         }else{
             alert("mail malo")
-        }
+        } */
     }
     
 

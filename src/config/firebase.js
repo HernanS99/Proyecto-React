@@ -45,6 +45,7 @@ const logInWithEmailAndPassword = async (email, password) => {
   try {
       await signInWithEmailAndPassword(auth, email, password);
       alert("inicio win")
+      window.location = '/AdminPage';
   } catch (err) {
       console.error(err);
       alert(err.message);
