@@ -13,14 +13,12 @@ const Recommendations = (props) => {
                             <div class="blockquote-custom-icon bg-info shadow-1-strong">
                                 <i class="fa fa-quote-left text-white"></i>
                             </div>
-                            <p class="fs-2">
-                                Nombre: {name}
-                            </p>
                             <p class="mb-0 mt-2 font-italic">
                                 {message}
                             </p>
                             <footer class="blockquote-footer pt-4 mt-4 border-top">
-                                <cite title="Source Title">{email}</cite>
+                                <cite title="Source Title">{email}</cite> - 
+                                <cite title="Source Title"> {name}</cite>
                             </footer>
                         </blockquote>
                     </div>
