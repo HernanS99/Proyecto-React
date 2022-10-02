@@ -12,6 +12,9 @@ function NavMax() {
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="/">Inicio</a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link active" aria-current="page" href="/Login">Administracion</a>
+            </li>
           </ul>
         </div>
       </div>
