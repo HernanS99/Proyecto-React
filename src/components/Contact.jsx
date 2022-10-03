@@ -4,8 +4,8 @@ import { collection , addDoc} from 'firebase/firestore'
 import toast, { Toaster } from 'react-hot-toast';
 
 const Contact = () => {
-
-    const [recom, setRecom] = useState({})
+    let name,email,mesagge;
+    const [recom, setRecom] = useState({name,email,mesagge})
 
     const handleInput = (evento) => {
         const { value, name } = evento.target
@@ -16,7 +16,7 @@ const Contact = () => {
     }
     const saveRecomendation = async () => {
         if(recom.name ===  undefined || recom.email === undefined || recom.message === undefined) {
-            alert("todo vacio")
+            toast.error('Debe rellenar todos los campos');
         }else{
             const regexmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i 
             if (regexmail.test(recom.email)) {
@@ -25,10 +25,10 @@ const Contact = () => {
                     await addDoc(collection(db,'recomendaciones'),recom)
                     
                 }catch(err){
-        
+                    
                 }
             }else{
-                alert("mail malo")
+                toast.error('Email incorrecto');
             } 
         }
         
