@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { auth,db } from "../config/firebase";
 import { Link } from 'react-router-dom'
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from 'react-hot-toast';
 import {
    
@@ -9,7 +9,7 @@ import {
     
   } from "firebase/auth";
 const Login = () => {
-
+    const navigate = useNavigate();
     let usuarios = []
     const [user, setUser] = useState({})
 
@@ -17,6 +17,7 @@ const Login = () => {
         try {
             await signInWithEmailAndPassword(auth, email, password);
             toast.success('Inicio de sesion exitoso!');
+            navigate("/AdminPage");
         } catch (err) {
             console.error(err);
             alert(err.message);

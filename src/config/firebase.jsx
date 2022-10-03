@@ -23,7 +23,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyAUuPXdZxn9_-PqDctjxM6ftgGq5VYEY7s",
   authDomain: "restorant-16225.firebaseapp.com",
   projectId: "restorant-16225",
-  storageBucket: "restorant-16225.appspot.com",
+  storageBucket: "restorant-16225.appspot.com", 
   messagingSenderId: "831058894425",
   appId: "1:831058894425:web:12b94cf80fe46ca3dd5b48"
 };
