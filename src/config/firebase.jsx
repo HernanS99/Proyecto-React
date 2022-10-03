@@ -17,6 +17,7 @@ import {
   where,
   addDoc,
 } from "firebase/firestore";
+import { Navigate } from "react-router-dom";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAUuPXdZxn9_-PqDctjxM6ftgGq5VYEY7s",
@@ -41,16 +42,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app)
 
-const logInWithEmailAndPassword = async (email, password) => {
-  try {
-      await signInWithEmailAndPassword(auth, email, password);
-      toast.success('Inicio de sesion exitoso-!');
-      window.location = '/AdminPage';
-  } catch (err) {
-      console.error(err);
-      alert(err.message);
-  }
-};
+
 
 const registerWithEmailAndPassword = async (name, email, password) => {
   try {
@@ -70,6 +62,5 @@ const registerWithEmailAndPassword = async (name, email, password) => {
 export {
   auth,
   db,
-  logInWithEmailAndPassword,
   registerWithEmailAndPassword
 };

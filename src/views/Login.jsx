@@ -1,20 +1,36 @@
 import { useEffect, useState } from "react"
-import { auth, signInWithEmailAndPassword, signInWithGoogle, logInWithEmailAndPassword } from "../config/firebase";
-
-
+import { auth,db } from "../config/firebase";
+import { Link } from 'react-router-dom'
+import { Navigate } from "react-router-dom";
+import toast, { Toaster } from 'react-hot-toast';
+import {
+   
+    signInWithEmailAndPassword
+    
+  } from "firebase/auth";
 const Login = () => {
 
     let usuarios = []
     const [user, setUser] = useState({})
 
+    const logInWithEmailAndPassword = async (email, password) => {
+        try {
+            await signInWithEmailAndPassword(auth, email, password);
+            toast.success('Inicio de sesion exitoso!');
+        } catch (err) {
+            console.error(err);
+            alert(err.message);
+        }
+      };
     const handleInput = (evento) => {
         const { value, name } = evento.target
         setUser({
             ...user,
             [name]: value
         })
-
     }
+
+
     function validateUser(){
         /* const regexmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i */
         /* if (regexmail.test(user.email)) {
@@ -41,6 +57,7 @@ const Login = () => {
        console.log(user)
         return (
             <section class="vh-100 gradient-custom">
+                <Toaster/>
                 <div class="container py-5 h-100">
                     <div class="row d-flex justify-content-center align-items-center h-100">
                         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
