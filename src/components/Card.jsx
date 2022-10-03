@@ -1,4 +1,4 @@
-
+import nf from '../assets/img/nf.png'
 
 function Card(props) {
     let datos = props.datos.data()
@@ -8,7 +8,7 @@ function Card(props) {
                 <div className="card-sl mb-5">
                     <div className="card-image">
                         <img
-                            src={img} alt='foto' classNameName="img-fluid"/>
+                            src={img === null ? nf : img} alt='foto' classNameName="img-fluid"/>
                     </div>
                     <div className="card-heading">
                         {nombre}

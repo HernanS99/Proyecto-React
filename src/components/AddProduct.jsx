@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { db } from '../config/firebase'
 import { collection , addDoc} from 'firebase/firestore'
+import toast, { Toaster } from 'react-hot-toast';
 
 function AddProduct(props){
     let nombre,precio,descripcion,img = ""
@@ -22,13 +23,14 @@ function AddProduct(props){
 
     const saveProductos = async () => {
         if(product.nombre === undefined || product.precio === undefined || product.descripcion === undefined|| product.img === undefined) {
-            alert("Debe rellenar todos los campos")
+            toast.error('Debe rellenar todos los campos!');
             
         }else{
             try{
                 await addDoc(collection(db,'products'),product)
                 props.update()
                 saveInsert(false)
+                toast.success('Creado Exitosamente!');
             }catch(err){
     
             }
@@ -40,7 +42,9 @@ function AddProduct(props){
     console.log(product)
     return (
         <div className="container">
+             <Toaster/>
             {
+                
                 insert === false
                 ? <div className="d-grid col-md-12 justify-content-md-end mb-3 mt-3">
                 <button type="button" className="btn btn-success btn-lg" onClick={changeState}>Agregar producto</button>
