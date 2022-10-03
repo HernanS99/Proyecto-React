@@ -7,6 +7,7 @@ import {
     signInWithEmailAndPassword
     
   } from "firebase/auth";
+  import { Link } from 'react-router-dom'
 const Login = () => {
     const navigate = useNavigate();
     let usuarios = []
@@ -84,7 +85,7 @@ const Login = () => {
                                     </div>
 
                                     <div>
-                                        <p class="mb-0">No tienes una cuenta? <a href="./Register" class="text-white-50 fw-bold">Registrate</a>
+                                        <p class="mb-0">No tienes una cuenta? <Link to="/Register">Registrarse</Link>
                                         </p>
                                     </div>
 
