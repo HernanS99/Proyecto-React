@@ -1,5 +1,11 @@
-
+import { useNavigate } from 'react-router-dom';
+import { Router, Route} from 'react-router'
+import { Link } from 'react-router-dom'
 function NavMax() {
+
+  const navigate = useNavigate();
+  
+
   return (
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container">
@@ -10,10 +16,10 @@ function NavMax() {
         <div className="collapse navbar-collapse" id="navbarScroll">
           <ul className="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll ">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">Inicio</a>
+            <a className="nav-link active" aria-current="page"><Link to="/">Inicio</Link></a>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/Login">Administracion</a>
+              <a className="nav-link active" aria-current="page"><Link to="/">Login</Link></a>
             </li>
           </ul>
         </div>

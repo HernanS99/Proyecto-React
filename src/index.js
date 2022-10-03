@@ -10,11 +10,10 @@ import Footer from './components/Footer';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div>
-    <NavMax />
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    <Footer />
+
   </div>
 
 );
