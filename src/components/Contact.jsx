@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { db } from '../config/firebase'
 import { collection , addDoc} from 'firebase/firestore'
+import toast, { Toaster } from 'react-hot-toast';
 
 const Contact = () => {
 
@@ -20,7 +21,9 @@ const Contact = () => {
             const regexmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i 
             if (regexmail.test(recom.email)) {
                 try{
+                    toast.success('Creado Exitosamente!');
                     await addDoc(collection(db,'recomendaciones'),recom)
+                    
                 }catch(err){
         
                 }
@@ -35,6 +38,7 @@ const Contact = () => {
     }
     return (
             <div className="container-fluid mb-4">
+                <Toaster/>
                 <div className="row">
                     <div className="col-12 text-center">
                         <div className="well well-sm">
