@@ -3,6 +3,7 @@ import { db } from '../config/firebase'
 import { collection, getDocs } from 'firebase/firestore'
 import { useEffect, useState } from "react"
 import AddProduct from "./AddProduct"
+import { signOut } from "firebase/auth"
 
 function TableProducts() {
 
@@ -16,7 +17,7 @@ function TableProducts() {
 
         }
     }
-
+    const signOutUser = () => signOut();
 
     useEffect(() => {
         getProducts()
@@ -48,6 +49,9 @@ function TableProducts() {
                         {productos.map(product => <ProductsRow datos={product} update={getProducts} key={product.id} />)}
                     </tbody>
                 </table>
+            </div>
+            <div className="text-center mb-3">
+                <button className="btn btn-success" onChange={() => this.signOutUser()}>Cerrar Sesion</button>
             </div>
         </div>
     )
