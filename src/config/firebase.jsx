@@ -8,7 +8,7 @@ import {
   sendPasswordResetEmail,
   signOut,
 } from "firebase/auth";
-
+import toast, { Toaster } from 'react-hot-toast';
 import {
   getFirestore,
   query,
@@ -44,7 +44,7 @@ const db = getFirestore(app)
 const logInWithEmailAndPassword = async (email, password) => {
   try {
       await signInWithEmailAndPassword(auth, email, password);
-      alert("inicio win")
+      toast.success('Inicio de sesion exitoso-!');
       window.location = '/AdminPage';
   } catch (err) {
       console.error(err);
