@@ -32,9 +32,8 @@ function App() {
       <Nav>
         <Routes>
           <Route path='/' element={<Home />} />
-          {user === null ? <Route path='*' element={<NotFound />} />: null}
-          
-          <Route path='/AdminPage' element={<AdminPage />} />
+          <Route path='*' element={<NotFound />} />
+          {user === null ? <Route path='/Login' element={<Login />} /> : <Route path='/AdminPage' element={<AdminPage />} />}
           <Route path='/Register' element={<Register />} />
           <Route path='/Login' element={<Login />} />
         </Routes>
