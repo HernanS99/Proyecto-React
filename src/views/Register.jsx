@@ -6,7 +6,10 @@ import {
     registerWithEmailAndPassword,
     signInWithGoogle,
   } from "../config/firebase";
+  import { useNavigate } from "react-router-dom";
+
 const Register = () => {
+    const navigate = useNavigate();
     let usuarios = []
     const [user, setUser] = useState({})
 
@@ -34,6 +37,7 @@ const Register = () => {
     function register() {
         if (!user.name) alert("Please enter name");
         registerWithEmailAndPassword(user.name, user.email, user.password);
+        navigate("/Login");
       };
 
     function getUsers() {
