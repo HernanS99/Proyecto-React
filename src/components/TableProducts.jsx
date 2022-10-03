@@ -1,5 +1,5 @@
 import ProductsRow from "./ProductsRow"
-import { db } from '../config/firebase'
+import { db, auth } from '../config/firebase'
 import { collection, getDocs } from 'firebase/firestore'
 import { useEffect, useState } from "react"
 import AddProduct from "./AddProduct"
@@ -17,7 +17,7 @@ function TableProducts() {
 
         }
     }
-    const signOutUser = () => signOut();
+    const signOutUser = async () => await signOut(auth);
 
     useEffect(() => {
         getProducts()
@@ -51,7 +51,7 @@ function TableProducts() {
                 </table>
             </div>
             <div className="text-center mb-3">
-                <button className="btn btn-success" onChange={() => this.signOutUser()}>Cerrar Sesion</button>
+                <button type="button" className="btn btn-success" onClick={() => signOutUser()}>Cerrar Sesion</button>
             </div>
         </div>
     )
