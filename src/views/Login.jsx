@@ -16,8 +16,9 @@ const Login = () => {
     const logInWithEmailAndPassword = async (email, password) => {
         try {
             await signInWithEmailAndPassword(auth, email, password);
-            toast.success('Inicio de sesion exitoso!');
+            
             navigate("/AdminPage");
+            toast.success('Inicio de sesion exitoso!');
         } catch (err) {
             console.error(err);
             alert(err.message);

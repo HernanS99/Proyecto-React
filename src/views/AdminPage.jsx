@@ -6,27 +6,30 @@ import { useEffect, useState } from "react"
 
 const AdminPage = () => {
     const [recom, setRecom] = useState([])
-    
+
 
 
     const getProducts = async () => {
-        try{
-            let response = await getDocs(collection(db,'recomendaciones'))
+        try {
+            let response = await getDocs(collection(db, 'recomendaciones'))
             setRecom(response.docs)
-        }catch(err){
-            
+        } catch (err) {
+
         }
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         getProducts()
-    },[])
+    }, [])
 
-    return(
-        <div>
-            {recom.map(recomendacion =><Recommendations datos={recomendacion} key={recomendacion.id}/>)}
-            <ProductsMenu/>
-            
+    return (
+        <div >
+            <p className="fs-1 text-center">Recomendaciones</p>
+            <div className="Scroll">
+                {recom.map(recomendacion => <Recommendations datos={recomendacion} key={recomendacion.id} />)}
+            </div>
+            <ProductsMenu />
+
         </div>
     )
 }

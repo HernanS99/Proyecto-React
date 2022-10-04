@@ -4,7 +4,7 @@ const Recommendations = (props) => {
     let datos = props.datos.data()
     const {email,name,message} = datos
     return (
-        <div class="container">
+        <div class="container" >
             <section class="mx-auto my-5">
 
                 <div class="card">
