@@ -32,14 +32,21 @@ function NavMax() {
             <li className="nav-item">
             <a  aria-current="page"><Link className="nav-link active" to="/">Inicio</Link></a>
             </li>
+            {!user === null ? 
+               null
+              : 
+              <li className="nav-item">
+              <a aria-current="page"> <Link class="nav-link text-secondary" to="/AdminPage">Administracion</Link> </a>
+              </li>
+            }
             {user === null ?
               <li className="nav-item">
                <button type=" button" className="btn btn-dark"><Link class="text-secondary" to="/Login">Administracion</Link> </button>
-            </li>
+              </li>
             :
-            <li className="nav-item">
+              <li className="nav-item">
               <button type=" button" className="btn btn-dark text-secondary" onClick={() => signOutUser()}>Cerrar Sesion</button>
-            </li>
+              </li>
             }
             
           </ul>
