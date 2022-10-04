@@ -80,3 +80,9 @@
   height:600px;
   overflow-y: scroll;
 }
+
+:link {
+  
+  text-decoration: none;
+  color: aquamarine;
+}

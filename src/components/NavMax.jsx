@@ -34,11 +34,11 @@ function NavMax() {
             </li>
             {user === null ?
               <li className="nav-item">
-              <a className="nav-link active" aria-current="page"><Link to="/Login">Administracion</Link></a>
+               <button type=" button" className="btn btn-dark"><Link class="text-secondary" to="/Login">Administracion</Link> </button>
             </li>
             :
             <li className="nav-item">
-              <button type=" button" className="btn btn-success" onClick={() => signOutUser()}>Cerrar Sesion</button>
+              <button type=" button" className="btn btn-dark text-secondary" onClick={() => signOutUser()}>Cerrar Sesion</button>
             </li>
             }
             
