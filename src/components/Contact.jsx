@@ -49,7 +49,7 @@ const Contact = () => {
                                     <div className="form-group">
                                         <label className="control-label" for="name">Nombre</label>
                                         <div className="">
-                                            <input id="name" name="name" type="text" placeholder="Tu nombre" className="form-control" minlength="2" maxlength="30" onChange={(evento) => handleInput(evento)}/>
+                                            <input id="name" name="name" type="text" placeholder="Tu nombre" className="form-control" onChange={(evento) => handleInput(evento)}/>
                                         </div>
                                     </div>
                                     <div className="form-group">
@@ -62,7 +62,7 @@ const Contact = () => {
                                     <div className="form-group mb-4">
                                         <label className="control-label" for="message">Tu Mensaje</label>
                                         <div className="">
-                                            <textarea className="form-control" id="message" name="message" placeholder="Por favor ingresa tu mensaje aqui..." minlength="30" rows="5" onChange={(evento) => handleInput(evento)}></textarea>
+                                            <textarea className="form-control" id="message" name="message" placeholder="Por favor ingresa tu mensaje aqui..." rows="5" onChange={(evento) => handleInput(evento)}></textarea>
                                         </div>
                                     </div>
 
