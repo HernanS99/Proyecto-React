@@ -30,11 +30,11 @@ function NavMax() {
         <div className="collapse navbar-collapse" id="navbarScroll">
           <ul className="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll ">
             <li className="nav-item">
-              <Link className="nav-link active" to="/">Inicio</Link>
+            <a  aria-current="page"><Link className="nav-link active" to="/">Inicio</Link></a>
             </li>
             {user === null ?
               <li className="nav-item">
-              <Link to="/Login">Administracion</Link>
+              <a className="nav-link active" aria-current="page"><Link to="/Login">Administracion</Link></a>
             </li>
             :
             <li className="nav-item">
