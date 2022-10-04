@@ -1,14 +1,11 @@
-import { useNavigate } from 'react-router-dom';
-import { Router, Route} from 'react-router'
+
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
-import { onAuthStateChanged } from 'firebase/auth';
+import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from "../config/firebase";
 
 function NavMax() {
 
-  const navigate = useNavigate();
-  
   const [user, setUser] = useState(null)
   onAuthStateChanged(auth, (usuario=>{
     if(usuario)
@@ -18,6 +15,7 @@ function NavMax() {
       setUser(null)
     }
   }))
+  const signOutUser = async () => await signOut(auth);
 
 
   return (
@@ -32,15 +30,15 @@ function NavMax() {
         <div className="collapse navbar-collapse" id="navbarScroll">
           <ul className="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll ">
             <li className="nav-item">
-            <a className="nav-link active" aria-current="page"><Link to="/">Inicio</Link></a>
+              <Link className="nav-link active" to="/">Inicio</Link>
             </li>
             {user === null ?
               <li className="nav-item">
-              <a className="nav-link active" aria-current="page"><Link to="/Login">Administracion</Link></a>
+              <Link to="/Login">Administracion</Link>
             </li>
             :
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page"><Link to="/Login">Administracion</Link></a>
+              <button type=" button" className="btn btn-success" onClick={() => signOutUser()}>Cerrar Sesion</button>
             </li>
             }
             
