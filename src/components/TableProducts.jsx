@@ -32,7 +32,7 @@ function TableProducts() {
             <div>
                 <AddProduct update={getProducts}/>
             </div>
-            <div>
+            <div className="table-responsive">
                 <table className="table">
                     <thead>
                         <tr>
