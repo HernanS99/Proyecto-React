@@ -36,12 +36,12 @@ function NavMax() {
                null
               : 
               <li className="nav-item">
-              <a aria-current="page"> <Link class="nav-link text-secondary" to="/AdminPage">Administracion</Link> </a>
+              <a aria-current="page"> <Link className="nav-link text-secondary" to="/AdminPage">Administracion</Link> </a>
               </li>
             }
             {user === null ?
               <li className="nav-item">
-               <button type=" button" className="btn btn-dark"><Link class="text-secondary" to="/Login">Administracion</Link> </button>
+               <button type=" button" className="btn btn-dark"><Link className="text-secondary" to="/Login">Administracion</Link> </button>
               </li>
             :
               <li className="nav-item">

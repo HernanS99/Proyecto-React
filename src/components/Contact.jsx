@@ -25,7 +25,8 @@ const Contact = () => {
                     await addDoc(collection(db,'recomendaciones'),recom)
                     
                 }catch(err){
-                    
+                    toast.error(err)
+                    console.log(err)
                 }
             }else{
                 toast.error('Email incorrecto');
