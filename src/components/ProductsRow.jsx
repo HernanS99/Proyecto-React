@@ -46,13 +46,12 @@ const ProductsRow = (props) => {
     return (
         <tr>
             <th scope="row">1</th>
-            <td>{edit===false ? nombre :<input id="nombre" name='nombre' value={epro.nombre} onChange={(e)=>handleInput(e)}/>}</td>
+            <td>{edit===false ? nombre :<input id="nombre" name='nombre' value={epro.nombre} onChange={(e)=>handleInput(e)}/>}<Toaster/></td>
             <td>{edit===false ? precio :<input id="precio" name='precio' value={epro.precio} onChange={(e)=>handleInput(e)} />} </td>
             <td>{edit===false ? descripcion :<input id="descripcion" name='descripcion' value={epro.descripcion} onChange={(e)=>handleInput(e)}/> }</td>
             <td>{edit===false ? img :<input id="img" name='img' value={epro.img} onChange={(e)=>handleInput(e)} />} </td>
             <td><button type="button" className="btn btn-primary" onClick={edit===false ? editt : update}>{edit===false ? 'Editar' : 'Actualizar'}</button></td>
             <td>{edit===false ? <button type="button" className="btn btn-danger" onClick={eliminar}>Eliminar</button>: null}</td>
-            <Toaster/>
         </tr>
     )
 }
