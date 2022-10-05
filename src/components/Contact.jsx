@@ -16,22 +16,22 @@ const Contact = () => {
     }
     console.log(recomen)
     const saveRecomendation = async () => {
-        /* if(recomen.name ===  undefined || recomen.email === undefined || recomen.message === undefined) {
+         if(recomen.name ===  undefined || recomen.email === undefined || recomen.message === undefined) {
             toast.error('Debe rellenar todos los campos');
         }else{
             const regexmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i 
-            if (regexmail.test(recomen.email)) { */
+            if (regexmail.test(recomen.email)) { 
                 try{
                     await addDoc(collection(db,'recomendaciones'),recomen)
                     toast.success('Creado Exitosamente!');
                 }catch(err){
                     toast.error(err)
                     console.log(err)
-                }/* 
+                }
             }else{
                 toast.error('Email incorrecto');
             } 
-        } */
+        } 
         
         
         
