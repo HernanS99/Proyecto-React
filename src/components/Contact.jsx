@@ -4,36 +4,36 @@ import { collection , addDoc} from 'firebase/firestore'
 import toast, { Toaster } from 'react-hot-toast';
 
 const Contact = () => {
-    let name,email,mesagge;
-    const [recom, setRecom] = useState({name,email,mesagge})
+    let name,email,message
+    const [recomen, setRecomen] = useState({name,email,message})
 
     const handleInput = (evento) => {
         const { value, name } = evento.target
-        setRecom({
-            ...recom,
+        setRecomen({
+            ...recomen,
             [name]: value
         })
     }
+    console.log(recomen)
     const saveRecomendation = async () => {
-        if(recom.name ===  undefined || recom.email === undefined || recom.message === undefined) {
+        /* if(recomen.name ===  undefined || recomen.email === undefined || recomen.message === undefined) {
             toast.error('Debe rellenar todos los campos');
         }else{
             const regexmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i 
-            if (regexmail.test(recom.email)) {
+            if (regexmail.test(recomen.email)) { */
                 try{
+                    await addDoc(collection(db,'recomendaciones'),recomen)
                     toast.success('Creado Exitosamente!');
-                    await addDoc(collection(db,'recomendaciones'),recom)
-                    
                 }catch(err){
                     toast.error(err)
                     console.log(err)
-                }
+                }/* 
             }else{
                 toast.error('Email incorrecto');
             } 
-        }
+        } */
         
-
+        
         
         
     }
