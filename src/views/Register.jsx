@@ -1,10 +1,7 @@
-import axios from "axios"
 import { useEffect } from "react"
 import { useState } from "react"
 import {
-    auth,
-    registerWithEmailAndPassword,
-    signInWithGoogle,
+    registerWithEmailAndPassword
   } from "../config/firebase";
   import { useNavigate } from "react-router-dom";
 
@@ -20,19 +17,6 @@ const Register = () => {
             [name]: value
         })
     }
-
-    /* const crearUsuario = async () => {
-        const respu = await axios.post('https://todo-app-bs.herokuapp.com/v1/user/signup', user)
-        console.log(respu.data)
-    } */
-    /* console.log(user)
-
-    function createUser() {
-        
-        usuarios.push(user);
-        console.log(usuarios)
-        localStorage.setItem("usuarios", JSON.stringify(usuarios));
-    } */
 
     function register() {
         if (!user.name) alert("Please enter name");

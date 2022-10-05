@@ -5,8 +5,8 @@ import toast, { Toaster } from 'react-hot-toast';
 import {
    
     signInWithEmailAndPassword
-    
-  } from "firebase/auth";
+
+} from "firebase/auth";
   import { Link } from 'react-router-dom'
 const Login = () => {
     const navigate = useNavigate();
@@ -31,22 +31,6 @@ const Login = () => {
             [name]: value
         })
     }
-
-
-    function validateUser(){
-        /* const regexmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i */
-        /* if (regexmail.test(user.email)) {
-            let existe = usuarios.find((element) => element.email === user.email && element.password === user.password)
-            if (existe === undefined) {
-                alert("ads")
-            } else {
-                alert("paso")
-            }
-        }else{
-            alert("mail malo")
-        } */
-    }
-    
 
         function getUsers() {
             let listusers = localStorage.getItem('usuarios')
