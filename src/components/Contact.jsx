@@ -14,7 +14,6 @@ const Contact = () => {
             [name]: value
         })
     }
-    console.log(recomen)
     const saveRecomendation = async () => {
          if(recomen.name ===  undefined || recomen.email === undefined || recomen.message === undefined) {
             toast.error('Debe rellenar todos los campos');
@@ -26,7 +25,6 @@ const Contact = () => {
                     toast.success('Creado Exitosamente!');
                 }catch(err){
                     toast.error(err)
-                    console.log(err)
                 }
             }else{
                 toast.error('Email incorrecto');

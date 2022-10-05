@@ -40,7 +40,6 @@ const Login = () => {
         useEffect(() => {
             getUsers()
         })
-       console.log(user)
         return (
             <section className="vh-100 gradient-custom">
                 <Toaster/>
@@ -57,12 +56,12 @@ const Login = () => {
 
                                         <div className="form-outline form-white mb-4">
                                             <input type="email" id="typeEmailX" name="email" className="form-control form-control-lg" onChange={(evento) => handleInput(evento)} />
-                                            <label className="form-label" for="typeEmailX">Correo</label>
+                                            <label className="form-label">correo</label>
                                         </div>
 
                                         <div className="form-outline form-white mb-4">
                                             <input type="password" id="typePasswordX" name="password" className="form-control form-control-lg" onChange={(evento) => handleInput(evento)} />
-                                            <label className="form-label" for="typePasswordX">Contraseña</label>
+                                            <label className="form-label">Contraseña</label>
                                         </div>
 
                                         <button className="btn btn-outline-light btn-lg px-5" type="submit" onClick={() => logInWithEmailAndPassword(user.email, user.password)}>Login</button>

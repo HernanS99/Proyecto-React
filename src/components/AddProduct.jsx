@@ -39,7 +39,6 @@ function AddProduct(props){
         
     }
 
-    console.log(product)
     return (
         <div className="container">
              <Toaster/>

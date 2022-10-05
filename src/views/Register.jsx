@@ -50,24 +50,18 @@ const Register = () => {
                                         <input type="text" id="typeEmailX" name="name" className="form-control form-control-lg"
                                             onChange={(evento) => handleInput(evento)}
                                         />
-                                        <label className="form-label" for="typeEmailX">Nombre</label>
-                                    </div>{/* 
-                                    <div className="form-outline form-white mb-4">
-                                        <input type="text" id="typeEmailX" name="lastName" className="form-control form-control-lg"
-                                            onChange={(evento) => handleInput(evento)}
-                                        />
-                                        <label className="form-label" for="typeEmailX">Apellido</label>
-                                    </div> */}
+                                        <label className="form-label" >Nombre</label>
+                                    </div>
                                     <div className="form-outline form-white mb-4">
                                         <input type="email" id="typeEmailX" name="email" className="form-control form-control-lg"
                                             onChange={(evento) => handleInput(evento)}
                                         />
-                                        <label className="form-label" for="typeEmailX">Email</label>
+                                        <label className="form-label" >Email</label>
                                     </div>
 
                                     <div className="form-outline form-white mb-4">
                                         <input type="password" id="typePasswordX" name="password" className="form-control form-control-lg" onChange={(evento) => handleInput(evento)} />
-                                        <label className="form-label" for="typePasswordX">Contraseña</label>
+                                        <label className="form-label">Contraseña</label>
                                     </div>
 
                                     <button className="btn btn-outline-light btn-lg px-5" type="submit" onClick={register}>Login</button>

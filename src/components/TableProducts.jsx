@@ -23,7 +23,6 @@ function TableProducts() {
         getProducts()
     }, [])
 
-    console.log(productos)
     return (
         <div>
             <div>

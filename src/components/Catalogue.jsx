@@ -25,7 +25,6 @@ const Catalogue = () => {
     },[])
     
    
-    console.log(productos)
     return (
         <div className="container">
             <div className="row">
