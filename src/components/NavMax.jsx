@@ -31,7 +31,7 @@ function NavMax() {
             <li className="nav-item">
               <NavLink className="nav-link" to="/">Inicio</NavLink>
             </li>
-            {!user === null ?
+            {user === null ?
               null
               :
               <li className="nav-item">
