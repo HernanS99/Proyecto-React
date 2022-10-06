@@ -1,4 +1,4 @@
-
+import navimg from '../assets/img/navimg.jpg'
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
@@ -22,7 +22,7 @@ function NavMax() {
 
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container">
-        <img className="navbar-brand" src="https://banner2.cleanpng.com/20180419/ptw/kisspng-japanese-cuisine-icon-sushi-computer-icons-sake-a-pair-of-chopsticks-5ad8ae8115d850.3968730015241498890895.jpg" width="80" height="54" alt="" />Restorant Comida China
+        <img className="navbar-brand" src={navimg} width="80" height="54" alt="" />Restorant Comida China
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
