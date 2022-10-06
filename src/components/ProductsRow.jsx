@@ -16,8 +16,7 @@ const ProductsRow = (props) => {
             toast.error('Eliminado exitosamente');
         }catch(err){
 
-        }
-        
+        }  
     }
 
     const editt = () => {
