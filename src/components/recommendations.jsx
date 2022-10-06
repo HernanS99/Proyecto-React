@@ -13,6 +13,9 @@ const Recommendations = (props) => {
                             <div className="blockquote-custom-icon bg-info shadow-1-strong">
                                 <i className="fa fa-quote-left text-white"></i>
                             </div>
+                            <div className="blockquote-custom-icon2 bg-info shadow-1-strong">
+                                <i className="fa fa-quote-left text-white"></i>
+                            </div>
                             <p className="mb-0 mt-2 font-italic">
                                 {message}
                             </p>
