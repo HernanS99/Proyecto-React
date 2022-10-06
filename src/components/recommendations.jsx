@@ -10,6 +10,7 @@ const Recommendations = (props) => {
         try{
             await deleteDoc(doc(db,'recomendaciones',props.datos.id))
             toast.error('Eliminado exitosamente');
+            props.upda();
         }catch(err){
 
         }  

@@ -26,7 +26,7 @@ const AdminPage = () => {
         <div >
             <p className="fs-1 text-center">Recomendaciones</p>
             <div className="Scroll">
-                {recom.map(recomendacion => <Recommendations datos={recomendacion} key={recomendacion.id} />)}
+                {recom.map(recomendacion => <Recommendations upda={getProducts} datos={recomendacion} key={recomendacion.id} />)}
             </div>
             <ProductsMenu />
 
