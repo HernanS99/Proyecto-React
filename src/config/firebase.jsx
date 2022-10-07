@@ -18,14 +18,13 @@ import {
   addDoc,
 } from "firebase/firestore";
 
-
 const firebaseConfig = {
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  storageBucket: "", 
-  messagingSenderId: "",
-  appId: ""
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_BUCKET, 
+  messagingSenderId: process.env.REACT_APP_SENDER,
+  appId: process.env.REACT_APP_API_ID
 };
 
 /* const firebaseConfig = {
