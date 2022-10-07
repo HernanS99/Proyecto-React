@@ -17,17 +17,17 @@ const Aboutus = () => {
                         Tenemos todo dispuesto para entregar una experiencia única.
                         </p>
                         <ul>
-                            <p><i className="fa-solid fa-check-double"></i> Directamente desde China nuestros chefs te cautivan con gastronomía tradicional de la región, amoldada a los gustos particulares del paladar santiaguino, prevaleciendo el interés principal de satisfacer el gusto, olfato y vista de nuestros clientes.</p>
-                            <p><i className="fa-solid fa-check-double"/> Contamos con una variada carta de comida china.</p>
+                            <p><i className="fa-solid fa-check-double"></i>Contamos con expertos en la cocina que te cautivaran con los sabores más tradicionales extradios directamente desde China, con el objetivo de brindar, con el objetivo de brindar una experencia satisfactoria todos tus sentidos.</p>
+                            <p><i className="fa-solid fa-check-double"/> Contamos con una amplia variedad de comida.</p>
                         </ul>
                         <div className="row icon-boxes">
                             <div className="col-md-6">
                                 <h4>Calidad</h4>
-                                <p>Contamos con ingredientes de calidad premium para darle las mejores comidas</p>
+                                <p>Contamos con una amplia variedad de comida.</p>
                             </div>
                             <div className="col-md-6 mt-4 mt-md-0">
                                 <h4>Tiempo de entrega</h4>
-                                <p>Tenemos el promedio de tiempo de entrega más corto de la region</p>
+                                <p>Tenemos el promedio de tiempo de entrega más rapido de la region.</p>
                             </div>
                         </div>
                     </div>
