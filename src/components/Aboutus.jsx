@@ -22,12 +22,10 @@ const Aboutus = () => {
                         </ul>
                         <div className="row icon-boxes">
                             <div className="col-md-6">
-                            <i className="fa-regular fa-cubes"/>
                                 <h4>Calidad</h4>
                                 <p>Contamos con ingredientes de calidad premium para darle las mejores comidas</p>
                             </div>
                             <div className="col-md-6 mt-4 mt-md-0">
-                            <i className="fa-regular fa-cubes"/>
                                 <h4>Tiempo de entrega</h4>
                                 <p>Tenemos el promedio de tiempo de entrega más corto de la region</p>
                             </div>
