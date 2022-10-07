@@ -1,10 +1,12 @@
+import tabla from '../assets/img/tabla.jpg'
+
 const NotFound = () => {
     return (
-        <div>
+        <div className='container'>
             <div className="d-flex align-items-center justify-content-center vh-100">
                 <div className="text-center row">
                     <div className=" col-md-6">
-                        <img src="https://miro.medium.com/max/1400/1*qdFdhbR00beEaIKDI_WDCw.gif" alt=""
+                        <img src={tabla} alt=""
                             className="img-fluid"/>
                     </div>
                     <div className=" col-md-6 mt-5">
