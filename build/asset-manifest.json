@@ -1,20 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.531f8927.css",
-    "main.js": "/static/js/main.20535b46.js",
+    "main.js": "/static/js/main.0466fef5.js",
     "static/media/sushi1.jpg": "/static/media/sushi1.8b09f03936a2338eda4b.jpg",
     "static/media/quiero.jpg": "/static/media/quiero.e475a833316bb21f7614.jpg",
     "static/media/tabla.jpg": "/static/media/tabla.7aa3517031d1ad45c426.jpg",
-    "static/media/comida-china.jpg": "/static/media/comida-china.c26b9845d29249c73a37.jpg",
     "static/media/team.jpg": "/static/media/team.c0cec2e143c519f3ec46.jpg",
     "static/media/nf.png": "/static/media/nf.295cf90aa4bc156e1ea4.png",
     "static/media/navimg.jpg": "/static/media/navimg.d02fe60bc10af8fff463.jpg",
     "index.html": "/index.html",
     "main.531f8927.css.map": "/static/css/main.531f8927.css.map",
-    "main.20535b46.js.map": "/static/js/main.20535b46.js.map"
+    "main.0466fef5.js.map": "/static/js/main.0466fef5.js.map"
   },
   "entrypoints": [
     "static/css/main.531f8927.css",
-    "static/js/main.20535b46.js"
+    "static/js/main.0466fef5.js"
   ]
 }
