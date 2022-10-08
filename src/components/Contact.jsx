@@ -32,7 +32,7 @@ const Contact = () => {
         }
     }
     return (
-            <div className="container-fluid mb-4">
+            <div className="container mb-4">
                 <Toaster/>
                 <div className="row">
                     <div className="col-12 text-center">
