@@ -1,6 +1,7 @@
 import Img from '../assets/img/team.jpg'
 
 const Aboutus = () => {
+
     return (
         <section id="about" className="about">
             <div className="container mb-5">
@@ -20,7 +21,7 @@ const Aboutus = () => {
                         <div className="row icon-boxes">
                             <div className="col-md-6">
                                 <h4>Calidad</h4>
-                                <p>Contamos con una amplia variedad de comida.</p>
+                                <p>Contamos con una amplia carta para deleitarse con todos los gustos.</p>
                             </div>
                             <div className="col-md-6 mt-4 mt-md-0">
                                 <h4>Tiempo de entrega</h4>
