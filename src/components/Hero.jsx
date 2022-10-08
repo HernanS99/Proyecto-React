@@ -1,7 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel';
 import Sushi from '../assets/img/sushi1.jpg'
 import Front from '../assets/img/quiero.jpg'
-import Food from '../assets/img/comida-china.jpg'
 
 const Hero = () => {
     return (
@@ -9,14 +8,14 @@ const Hero = () => {
             <div className="row ">
                 <div className="col-xl-5 col-md-12 p-5">
                     <h1 className='text-center fs-1 fw-bold'>Bienvenido</h1>
-                    <h4 className='mt-5'>Te invitamos a disfrutar de nuestra gastronomíca! Los mejores platillos extraidos directamente de la cultura Ásiatica, que junto a los ingredientes más frescos deleitarán tu paladar.</h4>
+                    <h4 className='mt-5'>Te invitamos a disfrutar de nuestra gastronomíca! Los mejores platillos directamente de la cultura Ásiatica, que junto a los ingredientes más frescos deleitarán tu paladar.</h4>
                 </div>
                 <div className="col-xl-7 col-md-12 p-5">
                     <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
                         <Carousel variant="dark">
                             <Carousel.Item>
                                 <img
-                                    className="w-100"
+                                    className="w-100 img-fluid"
                                     height=""
                                     src={Sushi}
                                     alt="First slide"
@@ -24,16 +23,9 @@ const Hero = () => {
                             </Carousel.Item>
                             <Carousel.Item>
                                 <img
-                                    className=" w-100"
+                                    className="w-100 img-fluid"
                                     src={Front}
                                     alt="Second slide"
-                                />
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                    className="w-100"
-                                    src={Food}
-                                    alt="Third slide"
                                 />
                             </Carousel.Item>
                         </Carousel>
