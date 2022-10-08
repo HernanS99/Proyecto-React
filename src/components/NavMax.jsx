@@ -40,7 +40,7 @@ function NavMax() {
             }
             {user === null ?
               <li className="nav-item">
-                <button type=" button" className="btn btn-dark nav-link"><NavLink className="nav-link text-secondary" to="/Login">Administracion</NavLink> </button>
+                <button type="button" className="btn btn-dark"><NavLink className="text-secondary" to="/Login">Administracion</NavLink> </button>
               </li>
               :
               <li className="nav-item">
