@@ -29,11 +29,7 @@ const Contact = () => {
             }else{
                 toast.error('Email incorrecto');
             } 
-        } 
-        
-        
-        
-        
+        }
     }
     return (
             <div className="container-fluid mb-4">
@@ -43,7 +39,7 @@ const Contact = () => {
                         <div className="well well-sm">
                             <form className="form-horizontal" action="" method="">
                                 <fieldset>
-                                    <legend className="text-center">Contactanos</legend>
+                                    <legend className="text-center">Dejanos tus recomendaciones o dudas</legend>
 
                                     <div className="form-group">
                                         <label className="control-label" >Nombre</label>

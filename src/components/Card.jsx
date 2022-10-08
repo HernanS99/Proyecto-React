@@ -16,7 +16,7 @@ function Card(props) {
                     <div className="card-text">
                         {descripcion}
                     </div>
-                    <div className="card-text">
+                    <div className="card-text fw-bold">
                         ${precio}
                     </div>
                 </div>
