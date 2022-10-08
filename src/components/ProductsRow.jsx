@@ -15,7 +15,6 @@ const ProductsRow = (props) => {
             props.update()
             toast.error('Eliminado exitosamente');
         }catch(err){
-
         }  
     }
 
@@ -31,15 +30,19 @@ const ProductsRow = (props) => {
     }
 
     const update = async () => {
-        try{
-            await setDoc(doc(db,'products',props.datos.id),epro)
-            props.update()
-            setEdit(false)
-            toast.success('Editado exitosamente');
-        }catch(err){
-
+        if(epro.nombre === undefined || epro.precio === "" || epro.descripcion === undefined|| epro.img === undefined) {
+            toast.error('Debe rellenar todos los campos!');
+            
+        }else{
+            try{
+                await setDoc(doc(db,'products',props.datos.id),epro)
+                props.update()
+                setEdit(false)
+                toast.success('Editado exitosamente');
+            }catch(err){
+    
+            }
         }
-        
     }
 
     return (
