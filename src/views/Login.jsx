@@ -54,7 +54,7 @@ const Login = () => {
 
                                         <div className="form-outline form-white mb-4">
                                             <input type="email" id="typeEmailX" name="email" className="form-control form-control-lg" onChange={(evento) => handleInput(evento)} />
-                                            <label className="form-label">correo</label>
+                                            <label className="form-label">Correo</label>
                                         </div>
 
                                         <div className="form-outline form-white mb-4">

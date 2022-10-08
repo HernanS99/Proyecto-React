@@ -34,16 +34,13 @@ function AddProduct(props){
             }catch(err){
     
             }
-        }
-        
-        
+        } 
     }
 
     return (
         <div className="container">
              <Toaster/>
             {
-                
                 insert === false
                 ? <div className="d-grid col-md-12 justify-content-md-end mb-3 mt-3">
                 <button type="button" className="btn btn-success btn-lg" onClick={changeState}>Agregar producto</button>
@@ -69,13 +66,9 @@ function AddProduct(props){
                 <div className="col-md-12 text-center mb-3">
                     <button type="button" className="btn btn-primary btn-lg" onClick={saveProductos}>Enviar</button>
                 </div>
-                
-
             </div>
             }
-            
         </div>
-
     )
 }
 

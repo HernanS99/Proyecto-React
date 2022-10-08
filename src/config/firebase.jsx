@@ -1,20 +1,11 @@
 import { initializeApp } from "firebase/app";
 import {
-  GoogleAuthProvider,
   getAuth,
-  signInWithPopup,
-  signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
-  sendPasswordResetEmail,
-  signOut,
 } from "firebase/auth";
-import toast, { Toaster } from 'react-hot-toast';
 import {
   getFirestore,
-  query,
-  getDocs,
   collection,
-  where,
   addDoc,
 } from "firebase/firestore";
 
