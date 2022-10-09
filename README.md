@@ -1,10 +1,6 @@
 Bienvenido a mi primer proyecto en react para udd bootcamp!
 
-Link
-
-
-
-Primer proyecto desarrollado en react + firebase
+Link : https://preeminent-kelpie-3d29f1.netlify.app/
 
 las tecnologias ocupadas en este proyecto son:
 
